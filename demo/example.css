@@ -1,0 +1,20 @@
+p {
+  background-color: #eee;
+  border: thin solid #777;
+  padding: 10px;
+}
+
+.video-js{
+  float: left;
+}
+
+.event-list {
+  float: left;
+  margin-left: 5px;
+  width: 200px;
+}
+
+.control{
+  padding-top: 1em;
+  clear: both;
+}

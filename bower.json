@@ -19,7 +19,7 @@
       "README.md"
    ],
   "dependencies"  : {
-     "videojs": ">=4.0",
+     "videojs": ">=5.4",
      "jquery": ">=1.10.2"
   },
   "license": "MIT",
