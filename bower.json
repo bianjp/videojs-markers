@@ -5,22 +5,19 @@
   "version": "0.5.0",
   "main": [
     "dist/videojs-markers.js",
-    "dist/videojs.markers.css"
+    "dist/videojs-markers.min.js",
+    "dist/videojs.markers.css",
+    "dist/videojs.markers.min.css"
   ],
   "ignore": [
-      "src",
-      ".gitignore",
-      "demo",
-      "screenshot.png",
-      "LICENSE-MIT",
-      "bower.json",
-      "Gruntfile.js",
-      "package.json",
-      "README.md"
-   ],
-  "dependencies"  : {
-     "videojs": ">=5.4",
-     "jquery": ">=1.10.2"
+    "**/.*",
+    "*.png",
+    "src",
+    "demo"
+  ],
+  "dependencies": {
+    "video.js": ">=5.4",
+    "jquery": ">=1.10.2"
   },
   "license": "MIT",
   "keywords": [
@@ -29,11 +26,5 @@
     "marker",
     "video",
     "player"
-  ],
-  "ignore": [
-    "**/.*",
-    "*.png",
-    "src",
-    "demo"
   ]
 }
