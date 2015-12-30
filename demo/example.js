@@ -23,20 +23,20 @@ window.onload = function(){
     markers: [
       {
         time: 9.5,
-        text: 'this'
+        text: 'this is a long long marker'
       },
       {
         time: 16,
         image: './thumbnail.jpg',
-        text: 'is'
+        text: 'marker with image'
       },
       {
         time: 23.6,
-        text: 'so'
+        text: ''
       },
       {
         time: 28,
-        text: 'cool'
+        text: 'marker'
       },
       {
         time: 36,
