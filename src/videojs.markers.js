@@ -99,6 +99,10 @@
         var tip = '<div class="vjs-tip"><div class="vjs-tip-arrow"></div><div class="vjs-tip-inner">';
         if (marker.image) {
           tip += '<img src="' + marker.image + '">';
+
+          if (marker.text) {
+            tip += '<br/>';
+          }
         }
         if (marker.text) {
           tip += marker.text;
