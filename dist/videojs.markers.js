@@ -3,11 +3,6 @@
 (function($, videojs, undefined) {
   // default setting
   var defaultSetting = {
-    markerStyle: {
-      'width': '7px',
-      'border-radius': '30%',
-      'background-color': 'red'
-    },
     markerTip: {
       display: true,
       time: function(marker) {
@@ -20,13 +15,6 @@
       text: function(marker) {
         return 'Break overlay: ' + marker.overlayText;
       },
-      style: {
-        'width': '100%',
-        'height': '20%',
-        'background-color': 'rgba(0, 0, 0, 0.7)',
-        'color': 'white',
-        'font-size': '17px'
-      }
     },
     onMarkerClick: function(marker) {},
     onMarkerReached: function(marker) {},
@@ -72,12 +60,12 @@
           marker.key = generateUUID();
 
           var markerDiv = createMarkerDiv(marker);
-          videoWrapper.find('.vjs-progress-control').append(markerDiv);
+          videoWrapper.find('.vjs-progress-control').prepend(markerDiv);
 
           if (setting.markerTip.display) {
             // only after inserted into DOM can we get its real width
             var tipDiv = markerDiv.find('.vjs-tip');
-            tipDiv.css('left', -tipDiv.outerWidth() / 2 + markerDiv.width() / 2 - 2 + 'px');
+            tipDiv.css('left', -tipDiv.outerWidth() / 2 + markerDiv.width() / 2 + 'px');
           }
 
           // store marker in an internal hash map
@@ -112,7 +100,7 @@
         markerDiv.append(tip);
       }
 
-      markerDiv.find('.marker').css(setting.markerStyle);
+      markerDiv.find('.marker');
       markerDiv
         .css({
           'margin-left': -markerDiv.width() / 2 + 'px',
@@ -219,7 +207,7 @@
 
     // problem when the next marker is within the overlay display time from the previous marker
     function initializeOverlay() {
-      breakOverlay = $('<div class="vjs-break-overlay"><div class="vjs-break-overlay-text"></div></div>').css(setting.breakOverlay.style);
+      breakOverlay = $('<div class="vjs-break-overlay"><div class="vjs-break-overlay-text"></div></div>');
       videoWrapper.append(breakOverlay);
       overlayIndex = -1;
     }
